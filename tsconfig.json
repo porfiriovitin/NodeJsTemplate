@@ -10,7 +10,7 @@
         // },
 
         "outDir": "./dist",
-        "rootDir": "./src",
+        "rootDir": ".",
 
         "module": "node16",
         "esModuleInterop": true,
