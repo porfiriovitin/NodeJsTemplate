@@ -80,4 +80,17 @@ export class UserController {
 
     return res.status(200).json({ message: "Login successful" });
   }
+
+  async logout(req: Request, res: Response) {
+    res.clearCookie("token", {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+    });
+    return res.status(200).json({ message: "Logout successful" });
+  }
+
+  async render(req: Request, res: Response) {
+    return res.sendFile("login.html", { root: "src/pages" });
+  }
 }

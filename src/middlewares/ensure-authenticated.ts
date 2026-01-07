@@ -8,7 +8,6 @@ interface TokenPayload extends JwtPayload {
 }
 
 /// :: Middleware to ensure the user is authenticated via JWT token.
-
 export function ensureAuthenticated(
   req: Request,
   res: Response,
